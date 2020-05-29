@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    --font-family: sans-serif;
+    --text-color: white;
+    background: #262626;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2em 5%;
+}
+
+.logo {
+    font-family: "Comic Sans MS", cursive, var(--font-family);
+    text-transform: capitalize;
+    font-weight: normal;
+    color: var(--text-color);
+    margin-right: 1em;
+}
+
+.navigationMenu {
+    margin: 1.2em 0 1em;
+}
+
+.navigationListItem {
+    display: inline-block;
+}
+
+.navigationListItem > a, .navigationList {
+    font-family: var(--font-family);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.navigationListItem > a {
+    font-size: 1.3em;
+}
+
+.navigationListItem + .navigationListItem {
+    margin-left: 1em;
+}
+
+.contactLink {
+    font-size: 0.8em;
+    border: 2px solid var(--text-color);
+    border-radius: 2px;
+    padding: 1em 2em;
+}
+
+@media screen and (max-width: 400px) {
+    .navigationListItem > a, .contactLink {
+        font-stretch: condensed;
+    }
+    .navigationListItem > a {
+        font-size: 1.1em;
+    }
+}
